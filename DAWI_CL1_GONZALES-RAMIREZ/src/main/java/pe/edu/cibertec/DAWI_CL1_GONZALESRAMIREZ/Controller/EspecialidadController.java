@@ -19,7 +19,7 @@ public class EspecialidadController {
 	private EspecialidadService EspecialidadService;
 	
 	@GetMapping("/frmManEspecialidad")
-	public String frmManEstado(Model model) {
+	public String frmManEspecialidad(Model model) {
 		model.addAttribute("listaEspecialidad", EspecialidadService.listarEspecialidades());
 		return "Especialidad/frmManEspecialidad";
 	}
@@ -41,7 +41,7 @@ public class EspecialidadController {
 		} catch (Exception e) {
 			mensaje="Especialidad no registrada";
 		}
-		model.addAttribute("estadoForm", new Especialidad());
+		model.addAttribute("especialidadForm", new Especialidad());
 		model.addAttribute("visualizar", true);
 		model.addAttribute("respuesta", mensaje);
 		return "Especialidad/frmRegEspecialidad";
