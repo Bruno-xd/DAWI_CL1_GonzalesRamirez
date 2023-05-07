@@ -46,5 +46,5 @@ public class EspecialidadController {
 		model.addAttribute("respuesta", mensaje);
 		return "Especialidad/frmRegEspecialidad";
 	}
-	//as
+	//commit final ahora si XD
 }
